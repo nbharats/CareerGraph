@@ -4,7 +4,14 @@ from flask_cors import CORS
 
 app=Flask(__name__)
 
-CORS(app, resources={r"/*": {"origins": "http://localhost:5173"}})
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "http://localhost:5173",
+            "https://careergraph-ai-dusky.vercel.app"
+        ]
+    }
+})
 
 @app.route("/")
 def home():
