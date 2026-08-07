@@ -14,22 +14,26 @@ function Home() {
 
     useEffect(() => {
 
-        axios
-            .get("http://127.0.0.1:5000/recommend/Bharat")
-            .then((response) => {
-                setJobs(response.data);
-            })
-            .catch((error) => {
-                console.log(error);
-            });
-        
-        axios
-        .get("http://127.0.0.1:5000/student/Bharat")
-        .then((res)=>{
-            setStudent(res.data);
-        });
+            api
+                .get("/recommend/Bharat")
+                .then((response) => {
+                    setJobs(response.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
 
-    }, []);
+
+            api
+                .get("/student/Bharat")
+                .then((res) => {
+                    setStudent(res.data);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+
+        }, []);
 
     return (
 
