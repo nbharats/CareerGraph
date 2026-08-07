@@ -2,16 +2,12 @@ from flask import Flask
 from database import get_driver
 from flask_cors import CORS
 
-app=Flask(__name__)
+app = Flask(__name__)
 
-CORS(app, resources={
-    r"/*": {
-        "origins": [
-            "http://localhost:5173",
-            "https://careergraph-ai-dusky.vercel.app"
-        ]
-    }
-})
+CORS(app, origins=[
+    "http://localhost:5173",
+    "https://careergraph-9qlj6ivju-bharats-projects-0a9a008a.vercel.app"
+])
 
 @app.route("/")
 def home():
