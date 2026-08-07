@@ -179,6 +179,14 @@ npm run dev
 
 ---
 
+## Live Demo
+
+https://careergraph-ai-dusky.vercel.app/
+
+## Screen Recording
+
+https://drive.google.com/file/d/1Z5b39NTGC6fW5yBGM_mTZPLCW1cijnmD/view?usp=sharing
+
 ## Author
 
 **Bharat**
